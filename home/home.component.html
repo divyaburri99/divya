@@ -1,0 +1,60 @@
+<div class="row" style="background-image:url(https://c8.alamy.com/comp/HWRRA8/modern-office-desk-background-with-laptop-and-coffee-cup-flat-lay-HWRRA8.jpg);height: 800px;width:auto;">
+    <div class="col-md-3"></div>
+        <div class="col-md-6" style="color: white;">
+            <h1 class="text-center text-black py-3">Registration form</h1>
+            <form id="form" class="row g-3 p-3" #formRef="ngForm" (ngSubmit)="formRef.form.valid&&onSubmit(formRef)">
+            <!-- username -->
+                <div class="col-12">
+                    <label for="inputUsername"  class="form-label"><strong>UserName</strong></label>
+                    <input type="text" class="form-control" id="inputUsername" placeholder="Enter username" name="username" ngModel required #username="ngModel">
+                    <!-- validation for username -->
+                    <span  *ngIf="(username.touched || formRef.submitted) && username.errors?.required">
+                        Username is required
+                    </span>
+                </div>
+                <!-- Firstname -->
+                <div class="col-12">
+                    <label for="inputFirstname"  class="form-label "><strong>FirstName</strong></label>
+                    <input type="text" class="form-control" id="inputFirstname" placeholder="Enter FirstName" name="FirstName" ngModel required #FirstName="ngModel">
+                    <!-- validation for Firstname -->
+                    <span  *ngIf="(FirstName.touched || formRef.submitted) && FirstName.errors?.required">
+                        FirstName is required
+                    </span>
+                </div>
+                <!-- Lasttname -->
+                 <div class="col-12">
+                    <label for="inputLastname"  class="form-label"><strong>LastName</strong></label>
+                    <input type="text" class="form-control" id="inputLastname" placeholder="Enter LastName" name="LastName" ngModel required #LastName="ngModel">
+                    <!-- validation for Lasttname -->
+                    <span  *ngIf="(LastName.touched || formRef.submitted) && LastName.errors?.required">
+                        LasttName is required
+                    </span>
+                 </div>
+                <!--email  -->
+                <div class="col-12">
+                    <label for="inputEmail"  class="form-label"><strong>Email</strong></label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email" name="email" ngModel required #email="ngModel">
+                    <!-- validation for email -->
+                    <span  *ngIf="(email.touched || formRef.submitted) && email.errors?.required">
+                         Email is required
+                    </span>
+                </div>
+                <!-- password -->
+                <div class="col-12">
+                    <label for="inputPassword" class="form-label"><strong>Password</strong></label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter password" name="password" ngModel required #password="ngModel">
+                    <!-- validation for password -->
+                    <span  *ngIf="(password.touched || formRef.submitted) && password.errors?.required">
+                        Password is required
+                    </span>
+                 </div>
+                <!-- Button -->
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-success text-white" style="font-size: 25px;">Register</button>
+                </div>
+                <p class="text-dark p-3 text-center" style="font-size: 15pt;"><strong>Already have an account?</strong><a  routerLink="/login" routerActiveLink="active"><strong>Click Here to Login</strong></a></p>
+            </form>
+        </div>
+    <div class="col-md-3"></div>
+</div>
+

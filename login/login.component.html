@@ -1,0 +1,23 @@
+<body style="background-image: url(https://wallpaperaccess.com/full/1567736.png);height: 800px;">
+  <h1 class="text-white text-center py-5">Welcome to Facebook</h1>
+<div class="container" style="width: 500px;" >
+
+      <form id="login" class="row g-2 p-3" #formRef="ngForm" (ngSubmit)="onSubmit(formRef)" >
+          <div class="form-group col-12 mt-2">
+              <label for="inputAddress" class="form-label">Usename</label>
+              <input type="text" class="form-control" id="inputAddress" name="username" ngModel>
+          </div>
+          <div class="form-group col-12">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" name="password" ngModel>
+          </div>          
+        
+      
+          <div class="col-12 mb-1 text-center">
+              <button type="submit" class="btn btn-primary mt-3 px-5">Login</button>
+          </div>
+      </form>
+      
+      <p  class="p-3 text-center">New to Flipkart?<strong><a routerLink="/register" routerActiveLink="active">Create An Account</a></strong></p>
+</div>
+</body>
